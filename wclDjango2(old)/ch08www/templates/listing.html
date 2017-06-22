@@ -1,0 +1,58 @@
+<!--listing.html(ch08www project)-->
+{% extends "base.html" %}
+{% block title %}欢迎来吐cao~{% endblock %}
+{% block content %}
+<form class = 'form' action = '/' method = 'GET'>
+	<label for = 'del_password'>删贴密码/张贴密码:</label>
+	<input id = 'del_password' type = 'text' name = 'del_password'>
+</form>
+{% if message %}
+<div class = 'alert alert-warning'>{{message}}</div>
+{% endif %}
+
+<script>
+function go_delete(id){
+			var del_password = document.getElementById('del_password').value
+			if (del_password != ''){
+
+							var usr = '/'+ id + '/' + del_password
+							window.location = usr 
+                                               }
+                      }
+</script>
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = 'col-md-12'>
+			<div class = 'panel panel-default'>
+				<div class = 'panel-heading' align = center>
+				<h3>开言吐槽</h3>
+				</div>
+			</div>
+			{% for p in posts %}
+				{% cycle "<div class = 'row'> <div class = 'col-md-6'>" "<div class = 'col-md-6'>"%}
+				<div class = 'panel {% cycle "panel-primary" "panel-info" "panel-warning" "panel-success" %}'>
+				<div class = 'panel-heading'>
+					<table width = '100%'>
+						<tr>
+							<td>
+								[{{p.nickname}}]觉得{{p.mood}}                                                             
+							</td>
+							<td align = right>
+								<i><small>{{p.pub_time}}</small></i>
+								
+							</td>
+						</tr>
+					</table>
+				</div>
+		<div class = 'panel-body'>{{p.message|linebreaks}}</div>
+		
+		<span class = "glyphicon glyphicon-trash"  onclick = 'go_delete({{p.id}})'></span>
+				</div>
+
+		</div>
+		
+				{% cycle "" "</div>"%}
+			{% endfor %}
+	</div>
+{% endblock %}
+	
