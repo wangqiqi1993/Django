@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
-MAILGUN_ACCESS_KEY = 'key-7818f13984a29dce227d3472c75c1f92'
+MAILGUN_ACCESS_KEY = 'key-7.......27d3472c75c1f92'
 MAILGUN_SERVER_NAME = 'sandboxebae5d6ff2a84530880cef7a249433b6.mailgun.org'
 import os
 
