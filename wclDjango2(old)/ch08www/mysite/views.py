@@ -80,7 +80,7 @@ def contact(request):
 					居住城市:{}
 					是否在学:{}
 					反映意见:{}'''.format(user_name,user_city,user_school,user_message)
-			email = EmailMessage('来自[吐槽大会]网站的意见',mail_body,user_email,['clwang1102@gmail.com'])
+			email = EmailMessage('来自[吐槽大会]网站的意见',mail_body,user_email,['cl....2@gmail.com'])
 			email.send()
 		else:
 			message = '请检查您输入的信息是否正确'
