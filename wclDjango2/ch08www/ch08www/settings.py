@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
-MAILGUN_ACCESS_KEY = 'key-7818f13984a29dce227d3472c75c1f92'
+MAILGUN_ACCESS_KEY = 'key-7..........3472c75c1f92'
 MAILGUN_SERVER_NAME = 'sandboxebae5d6ff2a84530880cef7a249433b6.mailgun.org'
 import os
 HAYSTACK_CONNECTIONS = {
@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$^*^+t*(0zmp!*-6=d9%1i^h8$=9#09pva6tsi_qkl&wx9jcqt'
+SECRET_KEY = '$^*^+t*(0zmp!*-6..............#09pva6tsi_qkl&wx9jcqt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
